@@ -17,7 +17,7 @@ export default function Navbar({ theme, setTheme }) {
     addEventListener('keydown', close); return () => { removeEventListener('keydown', close); document.body.style.overflow='' }
   }, [open])
   return <header className="nav-shell">
-    <a className="logo" href="#home" aria-label="Sanmuga Piriyan home">SP<span>.</span></a>
+    <a className="logo nav-brand" href="#home" aria-label="Sanmuga Piriyan home">Sanmuga <span>Piriyan.</span></a>
     <nav className={open ? 'nav-links open' : 'nav-links'} aria-label="Main navigation">
       {links.map(link => <a key={link} className={active===link.toLowerCase()?'active':''} href={`#${link.toLowerCase()}`} onClick={()=>setOpen(false)}>{link}</a>)}
     </nav>

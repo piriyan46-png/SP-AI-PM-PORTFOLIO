@@ -1,5 +1,5 @@
 export const profile = {
-  name: 'Sanmuga Piriyan', email: 'piriyan46@gmail.com', phone: '+91 6382169984', location: 'Bengaluru, India',
+  name: 'Sanmuga Piriyan', email: 'piriyan46@gmail.com', phone: '+91 63821 69984', phoneUrl: 'tel:+916382169984', location: 'Bengaluru, India',
   github: 'https://github.com/piriyan46-png', linkedin: 'https://www.linkedin.com/in/sanmuga-piriyan/',
   emailUrl: 'https://mail.google.com/mail/?view=cm&fs=1&to=piriyan46%40gmail.com&su=Portfolio%20Opportunity',
   resume: '/Sanmuga-Piriyan-Resume.docx',

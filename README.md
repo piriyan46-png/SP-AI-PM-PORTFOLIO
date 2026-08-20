@@ -1,4 +1,4 @@
-# SP-AI-PM-PORTFOLIO
+# Sanmuga Piriyan — AI Product Portfolio
 
 A responsive personal portfolio for Sanmuga Piriyan, built with React and Vite. It presents AI product-management experience, hands-on AI development skills, professional experience, certifications, and seven featured projects.
 
@@ -203,4 +203,3 @@ Deploy the generated `dist` directory to a static hosting provider such as Verce
 - Email: [piriyan46@gmail.com](mailto:piriyan46@gmail.com)
 - GitHub: [piriyan46-png](https://github.com/piriyan46-png)
 - Location: Bengaluru, India
->>>>>>> b892e96 (Initial portfolio commit)

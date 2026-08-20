@@ -1,5 +1,5 @@
 import { motion as Motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react'
+import { ArrowRight, Bot, BriefcaseBusiness, Box, Download, Github, Linkedin, Mail, MapPin, Phone, Sparkles, Target } from 'lucide-react'
 import { profile } from '../data/content'
 
 export default function Hero() {
@@ -15,16 +15,20 @@ export default function Hero() {
         <a className="button resume-button" href={profile.resume} download="Sanmuga-Piriyan-Resume.docx">Download résumé <Download/></a>
       </div>
       <div className="availability">
-        <span><MapPin/> {profile.location}</span><span><Sparkles/> Open to AI Product opportunities</span><a href={profile.emailUrl} target="_blank" rel="noopener noreferrer"><Mail/> {profile.email}</a>
+        <span><MapPin/> {profile.location}</span><span><Sparkles/> Open to AI Product opportunities</span><a href={profile.emailUrl} target="_blank" rel="noopener noreferrer"><Mail/> {profile.email}</a><a href={profile.phoneUrl} aria-label={`Phone ${profile.phone}`}><Phone/> {profile.phone}</a>
       </div>
     </Motion.div>
-    <Motion.div className="system-visual" initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.65,delay:.1}} aria-hidden="true">
-      <div className="visual-status"><i></i><span>AI PRODUCT SYSTEM</span></div>
-      <div className="orbit orbit-one"></div><div className="orbit orbit-two"></div>
-      <div className="core"><span>SP</span><small>PRODUCT SYSTEM</small></div>
-      {['Product Strategy','Gen AI','RAG','Agentic AI','Automation'].map((x,i)=><div className={`node node-${i+1}`} key={x}><i></i>{x}</div>)}
-      <div className="visual-caption">Strategy <span>→</span> Intelligence <span>→</span> Delivery</div>
-      <div className="grid-dots"></div>
-    </Motion.div>
+    <Motion.figure className="portrait-visual portrait-circle-only" initial={{opacity:0,scale:.92,y:18}} animate={{opacity:1,scale:1,y:0}} transition={{duration:.75,delay:.1,ease:[.22,1,.36,1]}}>
+      <div className="portrait-orbit portrait-orbit-one" aria-hidden="true"><i></i></div>
+      <div className="portrait-orbit portrait-orbit-two" aria-hidden="true"><i></i></div>
+      <div className="portrait-image-shell">
+        <img src="/images/sanmuga-piriyan-circle.png" alt="Sanmuga Piriyan, AI Product Manager and Product Builder" width="776" height="802" loading="eager" fetchPriority="high" decoding="async"/>
+        <span className="portrait-light-sweep" aria-hidden="true"></span>
+      </div>
+      <div className="portrait-role role-product-manager"><BriefcaseBusiness/><span>Product Manager</span></div>
+      <div className="portrait-role role-product-builder"><Box/><span>AI Product Builder</span></div>
+      <div className="portrait-role role-product-strategy"><Target/><span>Product Strategy</span></div>
+      <div className="portrait-role role-agentic-ai"><Bot/><span>Agentic AI</span></div>
+    </Motion.figure>
   </section>
 }
